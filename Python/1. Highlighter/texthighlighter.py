@@ -1,14 +1,3 @@
-#create a program that can receive a file and highlight the text in it to a specific number of lines
-#and then output the highlighted text to a new file
-#the program should be able to handle the following cases:
-#1. the file does not exist
-#2. the file exists but is empty
-#3. the file exists and has content
-#4. the file exists and has content but the number of lines to highlight is greater than the number of lines in the file
-#5. the file exists and has content but the number of lines to highlight is less than the number of lines in the file
-#6. the file exists and has content but the number of lines to highlight is equal to the number of lines in the file
-#7. the file exists and has content but the number of lines to highlight is equal to 0
-#8. the file exists and has content but the number of lines to highlight is less than 0
 
 import os
 import sys
