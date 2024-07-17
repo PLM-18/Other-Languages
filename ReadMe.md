@@ -17,7 +17,7 @@
 - Splay Tree (unfinished code)
 - Graph (unfinished code)
 
-### Jvascript
+### Javascript
 - WebSockets
 
 ### Leetcode
