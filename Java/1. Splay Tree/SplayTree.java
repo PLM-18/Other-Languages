@@ -37,8 +37,16 @@ public class SplayTree {
     }
 
     public Node access(int studentNumber) {
-        
+       return getStudentNumber(root, studentNumber);
     }
+	
+	//helper function for studentnumber fetch
+	private Node getStudentNumber(Node node, int studentNumber){
+		if(node == null) return null;
+		if(node.studentnumber ==  studentNumber) return node;
+		if(node.studentnumber > studentNumber) return getStudentNumber(node.left, studentNumber);
+		return getStudentNumber(node.right, studentNumber);
+	}
 
     public Node access(int studentNumber, Integer mark) {
        

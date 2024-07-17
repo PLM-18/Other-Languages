@@ -164,7 +164,6 @@ public class BST {
         return node;
     }
 
-
     public boolean contains(int data) {
         return (searchNode(root, data) != null);
     }

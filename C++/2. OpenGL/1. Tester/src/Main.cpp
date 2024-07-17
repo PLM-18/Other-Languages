@@ -1,21 +1,26 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
 int main() {
 	std::cout << "RUNNING OPENGL APPLICATION..." << std::endl;
+	glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
+	glm::mat4 trans = glm::mat4(1.0f);
+	trans = glm::translate(trans, glm::vec3(1.0f, 1.0, 0.0f));
+	vec = trans * vec;
+	
 
 	glfwInit();
+	//opengl version 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	
-#ifdef __APPLE__
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COPMPAT, GL_TRUE);
-#endif // 
 
 	GLFWwindow* window = glfwCreateWindow(800, 600, "Application Window", NULL, NULL);
 	if (!window) {
@@ -23,7 +28,7 @@ int main() {
 		glfwTerminate();
 		return -1;
 	}
-	glfwMakeContextCurrent(window);
+	glfwMakeContextCurrent(window); //make part of the object
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 		std::cout << "Failed to initialize glad\n";
@@ -34,12 +39,13 @@ int main() {
 
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+	//so the glfterminate does not execute
 	while (!glfwWindowShouldClose(window)) {
 		processInput(window);
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		glfwSwapBuffers(window);
-		glfwPollEvents();
+		glfwPollEvents(); //make window responsive
 	}
 
 	glfwTerminate();
