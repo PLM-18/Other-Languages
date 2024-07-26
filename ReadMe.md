@@ -1,4 +1,4 @@
-#   This repository is used to lean new Languages
+#   This repository is used to learn new Languages
 ##  Folders
 
 ### Assembly
@@ -17,7 +17,7 @@
 - Splay Tree (unfinished code)
 - Graph (unfinished code)
 
-### Jvascript
+### Javascript
 - WebSockets
 
 ### Leetcode
