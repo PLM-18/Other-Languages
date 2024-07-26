@@ -31,7 +31,13 @@ public class Linkedlist{
 	}
 
 	public int get(int index){
-
+		int Count = 0;
+		Node cur = head;
+		while(Count < index){
+			cur = cur.next;
+			Count++;
+		}
+		return cur;
 	}
 
 	public int indexOf(int data){

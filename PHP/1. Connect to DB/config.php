@@ -1,15 +1,37 @@
 <?php
-   $severname = "localhost";
-   $username = "myphpadmin";
-   $password = "";
-   $dbName = "users";
+   class Database{
+		private $host = "localhost";
+		private $db_name = "test";
+		private $username = "root":
+		private $password = "";
+		private static $instance = null;
 
-   $con = mysqli_connect($severname, $username, $password, $dbName);
+		public static function getInstance(){
+			if(!self::$instance){
+				self::$instance = new self();
+			}
+			return self::$instance;
+		}
 
-   if(mysqli_connect_errno()){
-    echo "Failed to connect!";
-    exit();
-   }
-   echo "Connection success";
+		private function __construct(){
+			$this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
+			if($this->conn->connect_error){
+				die("Connection failed: " . $this->conn->connect_error);
+			}
+		}
+
+		public function getConnection(){
+			$this->conn = null;
+			try{
+				$this->conn = new mysqli($this->host, $this->username, $this->password, $this->db_name);
+			}catch(Exception $e){
+				echo "Connection error: " . $e->getMessage();
+			}
+			return $this.conn;
+		}
+
+		public function closeConnection(){
+			$this->conn->close();
+		}
 
 ?>
