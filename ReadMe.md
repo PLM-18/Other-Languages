@@ -11,6 +11,7 @@
 ### C++
 - Dynamic Programming
 - OpenGL
+- Memento Pattern (unfinished)
 
 ### Java
 - Binary Search Tree
@@ -27,7 +28,7 @@ _I don't ususally update this because I do the solutions online most of the time
 - Medium
 
 ### PHP
-- Connect to DB (unfinished)
+- Connect to DB
 
 ### Python
 - Highlighter
