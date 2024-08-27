@@ -3,7 +3,7 @@
 
 ### Assembly
 - Hello World
-- Project 1
+- Bit Rotation
 
 ### C Languages
 - Hello World
