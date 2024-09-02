@@ -1,4 +1,4 @@
-
+; Basic 64 bit instructions for NASM
 BITS 64
 
 section .data
