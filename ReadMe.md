@@ -5,32 +5,32 @@
 - Hello World
 - Bit Rotation
 
-### C Languages
+### [C Languages](C Language)
 - Hello World
 
-### C++
+### [C++](C++)
 - Dynamic Programming
 - OpenGL
 - Memento Pattern (unfinished)
 
-### Java
+### [Java](Java)
 - Binary Search Tree
 - Splay Tree (unfinished code)
 - Graph (unfinished code)
 
-### Javascript
+### [Javascript](Javascript)
 - WebSockets
 
-### Leetcode
+### [Leetcode](Leetcode)
 _I don't ususally update this because I do the solutions online most of the time._
 - Easy
 - Hard
 - Medium
 
-### PHP
+### [PHP](PHP)
 - Connect to DB
 
-### Python
+### [Python](Python)
 - Highlighter
 - FirstProj
 - Machine Learning (haven't started :| )
