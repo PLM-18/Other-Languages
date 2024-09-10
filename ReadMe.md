@@ -1,7 +1,7 @@
 #   This repository is used to learn new Languages
 ##  Folders
 
-### [Assembly](https://www.google.com)
+### [Assembly](Assembly)
 - Hello World
 - Bit Rotation
 
