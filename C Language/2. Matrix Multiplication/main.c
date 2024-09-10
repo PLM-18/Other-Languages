@@ -19,9 +19,28 @@ void freeMatrix(float** matrix, int rows){
 void printMatrix(float** matrix, int rows, int cols){
     for(int i = 0; i < rows; i++){
         for(int j = 0; j < cols; j++){
-            printf("%.2f ", matrix[i][j]);
+            printf("%f", matrix[i][j]);
         }
         printf("\n");
+    }
+}
+
+void multiply(float** matrix1, float** matrix2, float** result, int rows1, int cols1, int rows2, int cols2){
+    for(int i = 0; i < rows1; i++){
+        for(int j = 0; j < cols2; j++){
+            result[i][j] = 0;
+            for(int k = 0; k < cols1; k++){
+                result[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+        }
+    }
+}
+
+void addition(float** matrix1, float** matrix2, float** result, int rows, int cols){
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            result[i][j] = matrix1[i][j] + matrix2[i][j];
+        }
     }
 }
 
@@ -53,17 +72,14 @@ int main(){
         return 0;
     }
 
-    for(int i = 0; i < rows1; i++){
-        for(int j = 0; j < cols2; j++){
-            result[i][j] = 0;
-            for(int k = 0; k < cols1; k++){
-                result[i][j] += matrix1[i][k] * matrix2[k][j];
-            }
-        }
-    }
-
+    multiply(matrix1, matrix2, result, rows1, cols1, rows2, cols2);
     printf("The result of the multiplication is:\n");
     printMatrix(result, rows1, cols2);
+
+    addition(matrix1, matrix2, result, rows1, cols1);
+    printf("The result of the addition is:\n");
+    printMatrix(result, rows1, cols1);
+    
     freeMatrix(matrix1, rows1);
     freeMatrix(matrix2, rows2);
     freeMatrix(result, rows1);
