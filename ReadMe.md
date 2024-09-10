@@ -5,7 +5,7 @@
 - Hello World
 - Bit Rotation
 
-### [C Languages](C\ Language)
+### [C Languages](C%20Language)
 - Hello World
 
 ### [C++](C++)
