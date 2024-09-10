@@ -1,7 +1,7 @@
 #   This repository is used to learn new Languages
 ##  Folders
 
-### Assembly
+[https://github.com/PLM-18/Other-Languages/tree/main/Assembly]### Assembly
 - Hello World
 - Bit Rotation
 
