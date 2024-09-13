@@ -2,21 +2,35 @@
 ##  Folders
 
 ### [Assembly](Assembly)
-- Hello World
-- Bit Rotation
+- 1. Hello World
+- 2. Bit Rotation
+- 3. XOR Operation
+- 4. String Manipulation
+- 5. 64 bit Instructions
+- 6. Float Conversion
+- 7. MatrixCalculations
 
 ### [C Languages](C%20Language)
-- Hello World
+- 1. Threads
+- 2. Matrix Multiplication
 
 ### [C++](C++)
-- Dynamic Programming
-- OpenGL
-- Memento Pattern (unfinished)
+- 0. Pointer Arithmetic
+- 1. Dynamic Programming
+- 2. OpenGL
+- 3. Memento Pattern
+- 4. Operator Overload
+- 5. Composite Design Pattern
+- 6. Memento & Strategy
+- 7. State Design Pattern
+- 8. Decorator Pattern
 
 ### [Java](Java)
-- Binary Search Tree
-- Splay Tree (unfinished code)
-- Graph (unfinished code)
+- 0. Binary Search Tree
+- 1. Splay Tree (unfinished code)
+- 2. Graph (unfinished code)
+- 3. Threads
+- 4. Increment function
 
 ### [Javascript](Javascript)
 - WebSockets
