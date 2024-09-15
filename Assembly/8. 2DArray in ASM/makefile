@@ -10,11 +10,11 @@ CFLAGS = -m32
 TARGET = program
 
 # Source files
-ASM_SRC = allocate_array_memory.asm
+ASM_SRC = adding.asm
 C_SRC = main.c
 
 # Object files
-ASM_OBJ = allocate_array_memory.o
+ASM_OBJ = adding.o
 C_OBJ = main.o
 
 # Rule to build the target executable
