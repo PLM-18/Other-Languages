@@ -6,7 +6,7 @@
 2. Bit Rotation
 3. XOR Operation
 4. String Manipulation
-5. 5. 64 bit Instructions
+5. 64 bit Instructions
 6. Float Conversion
 7. MatrixCalculations
 
