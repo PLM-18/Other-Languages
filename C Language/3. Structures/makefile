@@ -27,7 +27,7 @@ $(TARGET): $(OBJ)
 
 # Define the rule to generate assembly files
 %.s: %.c
-	$(CC) $(CFLAGS) -S $< -o $@
+	$(CC) $(CFLAGS) -S -masm=intel $< -o $@
 
 # Define the rule to clean the object and assembly files
 clean:
