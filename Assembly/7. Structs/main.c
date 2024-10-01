@@ -1,19 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
+#include <math.h>
+#define EPSILON 0.0001
 
 struct Student {
     char name[50];
     int age;
-    float marks;
+    float gpa;
 };
 
-extern struct Student* createStudent(char *name, int age, float marks);
+extern struct Student* createStudent(char *name, int age, float gpa);
 
 void printStudent(struct Student* student) {
     printf("Name: %s\n", student->name);
     printf("Age: %d\n", student->age);
-    printf("Marks: %.2f\n", student->marks);
+    printf("gpa: %.2f\n", student->gpa);
 }
 
 int main() {

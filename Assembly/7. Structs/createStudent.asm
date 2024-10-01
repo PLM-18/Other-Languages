@@ -1,29 +1,35 @@
+BITS 64
+
 global createStudent
 extern malloc
 
 section .data
     struc Student
-        .name: resb 50 alignb 8
-        .age: resd 1
-        .marks: resq 1
+        .name resb 50
+        alignb 8
+        .age resb 1
+        .gpa resb 1
     endstruc
 
 section .text
 
+; The function protptype is
+; Student* createStudent(char *name, int age, float gpa);
+
 createStudent:
     .name equ 0
     .age equ 8
-    .marks equ 16
+    .gpa equ 16
 
     push rbp
     mov rbp, rsp
 
-    sub rsp, 24
+    sub rbp, 32
     mov [rsp + createStudent.name], rdi
-    mov [rsp + createStudent.age], rsi
-    movsd [rsp + createStudent.marks], xmm0
+    mov [rsp + createStudent.age], edx
+    movsd [rsp + createStudent.gpa], xmm0
 
-    mov rdi, 24
+    mov rdi, Student_size
     call malloc
 
     test rax, rax
@@ -35,13 +41,11 @@ createStudent:
     rep movsb
 
     mov rsi, [rsp + createStudent.age]
-    mov rdi, [rax + Student.age]
-    mov [rdi], rsi
+    mov [rax + Student.age], esi
 
-    movsd xmm0, [rsp + createStudent.marks]
-    mov rdi, [rax + Student.marks]
-    movsd [rdi], xmm0
+    movsd xmm0, [rsp + createStudent.gpa]
+    movsd [rax + Student.gpa], xmm0
 
 .exit:
-    leave
+    leave 
     ret
