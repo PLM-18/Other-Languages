@@ -37,7 +37,7 @@ public class Linkedlist{
 			cur = cur.next;
 			Count++;
 		}
-		return cur;
+		return Count;
 	}
 
 	public int indexOf(int data){
