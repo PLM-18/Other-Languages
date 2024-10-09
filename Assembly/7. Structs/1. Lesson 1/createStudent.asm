@@ -5,8 +5,7 @@ extern malloc
 
 section .data
     struc Student
-        .name resb 50
-        alignb 8
+        .name resb 50 align 8
         .age resb 1
         .gpa resb 1
     endstruc
@@ -29,7 +28,7 @@ createStudent:
     mov [rsp + createStudent.age], edx
     movsd [rsp + createStudent.gpa], xmm0
 
-    mov rdi, Student_size
+    mov rdi, 58
     call malloc
 
     test rax, rax
