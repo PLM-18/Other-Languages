@@ -2,48 +2,50 @@ BITS 64
 
 global createStudent
 extern malloc
+extern strcpy
 
 section .data
     struc Student
-        .name resb 50 align 8
-        .age resb 1
-        .gpa resb 1
+        .age resd 1
+        .name resb 50 
+        align 8
+        .gpa resq 1 
+        align 4
     endstruc
 
 section .text
 
-; The function protptype is
+; The function prototype is
 ; Student* createStudent(char *name, int age, float gpa);
 
 createStudent:
-    .name equ 0
-    .age equ 8
-    .gpa equ 16
-
     push rbp
     mov rbp, rsp
 
-    sub rbp, 32
-    mov [rsp + createStudent.name], rdi
-    mov [rsp + createStudent.age], edx
-    movsd [rsp + createStudent.gpa], xmm0
+    sub rsp, 32
+    mov [rsp + 0], rdi
+    mov [rsp + 8], esi
+    movss [rsp + 16], xmm0
 
-    mov rdi, 58
+    mov rdi, Student_size
     call malloc
 
     test rax, rax
     jz .exit
 
-    mov rsi, [rsp + createStudent.name]
+    mov esi, [rsp + 8]
+    mov [rax + Student.age], esi
+
+    mov rsi, [rsp + 0]
     lea rdi, [rax + Student.name]
     mov rcx, 50
     rep movsb
 
-    mov rsi, [rsp + createStudent.age]
-    mov [rax + Student.age], esi
-
-    movsd xmm0, [rsp + createStudent.gpa]
+    movsd xmm0, [rsp + 16]
     movsd [rax + Student.gpa], xmm0
+
+    leave
+    ret
 
 .exit:
     leave 

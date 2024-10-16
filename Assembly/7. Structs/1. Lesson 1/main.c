@@ -6,8 +6,8 @@
 #define EPSILON 0.0001
 
 struct Student {
-    char name[50];
     int age;
+    char name[50];
     float gpa;
 };
 
