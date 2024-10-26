@@ -45,9 +45,7 @@ _I don't ususally update this because I do the solutions online most of the time
 - Connect to DB
 
 ### [Python](Python)
-- Highlighter
-- FirstProj
-- Machine Learning (haven't started :| )
+- 1. PPM Reader
 
 
 
