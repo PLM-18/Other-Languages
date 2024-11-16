@@ -11,7 +11,7 @@
 7. MatrixCalculations
 
 ### [C Languages](C%20Language)
-![C Logo](https://icons8.com/icon/40670/c-programming.png)
+![C Logo](https://banner2.cleanpng.com/20171217/033/av2bv0zlf.webp)
 1. Threads
 2. Matrix Multiplication
 
