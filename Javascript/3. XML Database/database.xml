@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notes>
-  <!-- Notes will be added here -->
-</notes>
+<people>
+  <person id= "1">
+   <name>Smith</name>
+    <address>
+      <road>Spring Street</road>
+      <city>New York</city>
+      <zipcode>0122</zipcode>
+    </address>
+  </person>
+  <person id= "2">
+    <name>Bob</name>
+    <address>
+      <road>Brianwood Road</road>
+      <city>Arma</city>
+      <zipcode>0134</zipcode>
+    </address>
+  </person>
+</people>
